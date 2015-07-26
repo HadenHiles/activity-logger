@@ -13,31 +13,48 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-    <nav class="nav navbar-default">
-        <a href="/default.aspx" class="nav navbar-brand">Activity Logger</a>
-        <ul class="nav navbar-nav">
-            <asp:PlaceHolder ID="plhPublic" runat="server">
-                <li><a href="/register.aspx">Register</a></li>
-                <li><a href="/login.aspx">Login</a></li>
-            </asp:PlaceHolder>
-            <asp:PlaceHolder ID="plhPrivate" runat="server">
-                <li><a href="/admin/leaderboard.aspx">Leaderboard</a></li>
-                <li><a href="/admin/activitylog.aspx">Activity Log</a></li>
-                <li><a href="/logout.aspx">Log Out</a></li>
-            </asp:PlaceHolder>
-        </ul>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/default.aspx">Activity Logger</a>
+            </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                    <ul class="nav navbar-nav">
+                        <asp:PlaceHolder ID="plhPublic" runat="server">
+                            <li><a href="/register.aspx">Register</a></li>
+                            <li><a href="/login.aspx">Login</a></li>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder ID="plhPrivate" runat="server">
+                            <li><a href="/admin/leaderboard.aspx">Leaderboard</a></li>
+                            <li><a href="/admin/activitylog.aspx">Activity Log</a></li>
+                            <li><a href="/logout.aspx">Log Out</a></li>
+                        </asp:PlaceHolder>
+                    </ul>
+                </div>
+        </div>
     </nav>
     <form id="form1" runat="server" class="form-horizontal">
-    <div class="container">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
-    <footer class="alert alert-info">
-        <p>Copyright 2015 &copy; Jdog & Hschnizel - Activity Logger App</p>
+    <br />
+    <footer class="alert">
+        <div class="container">
+            <p>Copyright 2015 &copy; Jdog & Hschnizel - Activity Logger App</p>
+        </div>
     </footer>
 </body>
 

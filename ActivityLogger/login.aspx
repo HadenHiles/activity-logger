@@ -2,24 +2,34 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <h1>Login</h1>
-
-    <div>
-        <asp:Label runat="server" ID="lblStatus" CssClass="label label-danger"></asp:Label>
-    </div>
-
-    <div class="form-group">
-        <label for="txtUsername" class="col-sm-2">Username: </label>
-        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
-    </div>
-
-    <div class="form-group">
-        <label for="txtPassword" class="col-sm-2">Password: </label>
-        <asp:TextBox ID="txtPassword" runat="server" textmode="password"></asp:TextBox>
-    </div>
-
-    <div class="form-group">
-        <asp:Button id="btnLogin" Text="Login" runat="Server" OnClick="btnLogin_Click" cssClass="btn btn-primary" />
+    <div class="container">
+        <h1>Login</h1>
+        <hr />
+        <div class="col-lg-6">
+            <div>
+                <asp:Label runat="server" ID="lblStatus" CssClass="label label-danger full-width"></asp:Label>
+            </div>
+            <div class="clear"></div>
+            <br />
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label for="txtUsername" style="font-size: 20px; margin-top: 7px;">Username: </label>
+                </div>
+                <div class="col-sm-8">
+                    <asp:TextBox ID="txtUsername" runat="server" CssClass="right input-lg full-width"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label for="txtPassword" style="font-size: 20px; margin-top: 7px;">Password: </label>
+                </div>
+                <div class="col-sm-8">
+                    <asp:TextBox ID="txtPassword" runat="server" CssClass="right input-lg full-width" textmode="password"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group">
+                <asp:Button id="btnLogin" Text="Login" runat="Server" OnClick="btnLogin_Click" cssClass="btn btn-success right" />
+            </div>
+        </div>
     </div>
 </asp:Content>

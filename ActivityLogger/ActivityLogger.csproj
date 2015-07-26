@@ -135,6 +135,17 @@
     </Content>
     <None Include="Properties\PublishProfiles\ASPNETLesson5.pubxml" />
     <None Include="Properties\PublishProfiles\ContosoUniversity--Lesson11.pubxml" />
+    <Content Include="styles\bootstrap-overrides.less" />
+    <Content Include="styles\bootstrap-overrides.css.map">
+      <DependentUpon>bootstrap-overrides.css</DependentUpon>
+    </Content>
+    <Content Include="styles\main.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="styles\main.less" />
+    <Content Include="styles\main.css.map">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,6 +157,13 @@
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="register.aspx" />
+    <Content Include="styles\bootstrap-overrides.css" />
+    <Content Include="styles\bootstrap-overrides.min.css">
+      <DependentUpon>bootstrap-overrides.css</DependentUpon>
+    </Content>
+    <Content Include="styles\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

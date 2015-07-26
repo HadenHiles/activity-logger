@@ -40,7 +40,7 @@ namespace ActivityLogger
             else
             {
                 lblStatus.Text = result.Errors.FirstOrDefault();
-                lblStatus.CssClass = "label label-danger";
+                lblStatus.CssClass = "label label-danger full-width";
             }
         }
     }
