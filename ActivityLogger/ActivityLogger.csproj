@@ -134,6 +134,23 @@
       <DependentUpon>Contoso.edmx</DependentUpon>
       <LastGenOutput>Contoso.cs</LastGenOutput>
     </Content>
+    <EntityDeploy Include="Models\activitylogger.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>activitylogger.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\activitylogger.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>activitylogger.edmx</DependentUpon>
+      <LastGenOutput>activitylogger.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\activitylogger.edmx.diagram">
+      <DependentUpon>activitylogger.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\activitylogger.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>activitylogger.edmx</DependentUpon>
+      <LastGenOutput>activitylogger.cs</LastGenOutput>
+    </Content>
     <None Include="Properties\PublishProfiles\ASPNETLesson5.pubxml" />
     <None Include="Properties\PublishProfiles\ContosoUniversity--Lesson11.pubxml" />
     <Content Include="styles\bootstrap-overrides.less" />
@@ -243,6 +260,39 @@
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\account.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\activity.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\activitylogger.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>activitylogger.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\activitylogger.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\activitylogger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>activitylogger.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
     </Compile>
@@ -270,6 +320,9 @@
     <Compile Include="Models\CustomerDemographic.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Department.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
     </Compile>
@@ -278,6 +331,9 @@
     </Compile>
     <Compile Include="Models\Enrollments.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\goal.cs">
+      <DependentUpon>activitylogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
