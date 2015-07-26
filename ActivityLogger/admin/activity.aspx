@@ -22,7 +22,7 @@
             <asp:TextBox ID="txtActivityName" runat="server" CssClass="input-lg full-width"></asp:TextBox>
         </div>
         <div class="col-lg-6">
-            <asp:Button ID="btnLog" runat="server" CssClass="btn btn-info large large-full" Text="Log Activity" />
+            <asp:Button ID="btnLog" runat="server" CssClass="btn btn-info large large-full" Text="Log Activity" OnClick="btnLog_Click" />
         </div>
     </div>
 </asp:Content>

@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Login</h1>
         <hr />
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <div>
                 <asp:Label runat="server" ID="lblStatus" CssClass="label label-danger full-width"></asp:Label>
             </div>
@@ -27,9 +27,9 @@
                     <asp:TextBox ID="txtPassword" runat="server" CssClass="right input-lg full-width" textmode="password"></asp:TextBox>
                 </div>
             </div>
-            <div class="form-group">
-                <asp:Button id="btnLogin" Text="Login" runat="Server" OnClick="btnLogin_Click" cssClass="btn btn-success right" />
-            </div>
+        </div>
+        <div class="col-lg-4">
+            <asp:Button id="btnLogin" Text="Login" runat="Server" OnClick="btnLogin_Click" cssClass="btn btn-success large large-full" />
         </div>
     </div>
 </asp:Content>

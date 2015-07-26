@@ -5,8 +5,7 @@
     <div class="container">
         <h1>Register</h1>
         <hr />
-        <div class="col-lg-6">
-            <h6>All fields are required</h6>
+        <div class="col-lg-8">
             <div>
                 <asp:label id="lblStatus" runat="Server" cssClass="label label-info full-width"></asp:label>
             </div>
@@ -39,9 +38,10 @@
                         operator="equal" cssClass="label label-danger full-width"></asp:comparevalidator>
                 </div>
             </div>
-            <div class="form-group">
-                <asp:button id="btnRegister" text="Register" runat="server" cssClass="btn btn-success right" OnClick="btnRegister_Click" />
-            </div>
+        </div>
+        <div class="col-lg-4">
+            <br />
+            <asp:button id="btnRegister" text="Register" runat="server" cssClass="btn btn-success large large-full" OnClick="btnRegister_Click" />
         </div>
     </div>
 </asp:Content>
