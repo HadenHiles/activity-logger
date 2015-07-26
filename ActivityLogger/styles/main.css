@@ -66,4 +66,19 @@ footer {
   float: left;
   text-align: left;
 }
+/* Timer */
+.time-label {
+  font-size: 80px !important;
+  border: none;
+  background: none;
+  text-align: center;
+  width: 100%;
+}
+.btn.large {
+  font-size: 30px;
+  padding: 50px 10px;
+  margin: 5px 5% 0 5%;
+  width: 40%;
+  float: left;
+}
 /*# sourceMappingURL=main.css.map */
