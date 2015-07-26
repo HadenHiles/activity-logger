@@ -9,11 +9,20 @@
         <h1>Record Activity</h1>
         <hr />
         <div class="well col-lg-6">
-            <input id="time-display" class="time-label" type="text" value="00:00:00" disabled="disabled" />
+            <asp:TextBox ID="txtTimeDisplay" runat="server" CssClass="time-label" Text="00:00:00" Enabled="false"></asp:TextBox>
         </div>
         <div class="col-lg-6">
-            <button class="btn btn-default large" id="reset">Reset</button>
-            <button class="btn btn-success large" id="start" active="false">Start</button>
+            <button class="btn btn-default large large-half" style="margin-right: 2.5%;" id="reset">Reset</button>
+            <button class="btn btn-success large large-half" style="margin-left: 2.5%;" id="start" active="false">Start</button>
+        </div>
+        <div class="clear"></div>
+        <hr />
+        <div class="col-lg-6">
+            <label for="txtActivityName">What activity were you doing?</label>
+            <asp:TextBox ID="txtActivityName" runat="server" CssClass="input-lg full-width"></asp:TextBox>
+        </div>
+        <div class="col-lg-6">
+            <asp:Button ID="btnLog" runat="server" CssClass="btn btn-info large large-full" Text="Log Activity" />
         </div>
     </div>
 </asp:Content>

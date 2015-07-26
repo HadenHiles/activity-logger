@@ -1,6 +1,7 @@
 ﻿@import "bootstrap-overrides.less";
 
 body {
+    background: #FEFEFE;
 }
 .right {
     float: right;
@@ -19,7 +20,8 @@ body {
 
 /* Timer */
 .time-label {
-    font-size: 80px !important;
+    font-size: 50px !important;
+    padding: 20px 0;
     border: none;
     background: none;
     text-align: center;
@@ -28,7 +30,13 @@ body {
 .btn.large {
     font-size: 30px;
     padding: 50px 10px;
-    margin: 5px 5% 0 5%;
-    width: 40%;
+    margin: 3px 0 0 0;
     float: left;
+    &.large-half {
+        width: 47.5%;
+    }
+    &.large-full {
+        margin: 10px 0 0 0;
+        width: 100%;
+    }
 }
