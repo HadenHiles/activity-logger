@@ -31,23 +31,13 @@ namespace ActivityLogger.admin
                     //use link to query the Departments model
                     var activityItems = (from a in conn.activities
                             where a.account_id == user
-                            select new { a.id, a.activity_name, a.account_id, a.duration }
+                            select new { a.id, a.activity_name, a.duration }
                     );
                     
                     //bind the query result to the gridview
                     //String sort = Session["SortColumn"] + " " + Session["SortDirection"].ToString();
                     //grdActivities.DataSource = activity.AsQueryable().OrderBy(sort).ToList();
                     grdActivities.DataSource = activityItems.ToList();
-
-                    if (grdActivities.DataSourceObject == null)
-                    {
-                        lblMessage.Visible = true;
-                    }
-                    else
-                    {
-                        lblMessage.Visible = false;
-                    }
-
                     grdActivities.DataBind();
                 }
             //}
