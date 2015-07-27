@@ -13,6 +13,15 @@ namespace ActivityLogger.admin {
     public partial class activitymanage {
         
         /// <summary>
+        /// lblTimeHidden control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField lblTimeHidden;
+        
+        /// <summary>
         /// txtTimeDisplay control.
         /// </summary>
         /// <remarks>
