@@ -2,12 +2,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--jquery CDN -->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        var txtTimeDisplayAsp;
+        var lblTimeHidden;
+        $(document).ready(function () {
+            txtTimeDisplayAsp = $('#<%=txtTimeDisplay.ClientID%>');
+            lblTimeHidden = $('#<%=lblTimeHidden.ClientID%>');
+        });
+    </script>
     <script type="text/javascript" src="../js/timer.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <h1>Record Activity</h1>
         <hr />
+        <asp:HiddenField ID="lblTimeHidden" runat="server" />
         <div class="well col-lg-6">
             <asp:TextBox ID="txtTimeDisplay" runat="server" CssClass="time-label" Text="00:00:00" Enabled="false"></asp:TextBox>
         </div>

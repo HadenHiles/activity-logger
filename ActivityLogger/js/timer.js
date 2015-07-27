@@ -3,7 +3,8 @@ $(document).ready(function () {
     var timeout = 1000;
     var timer;
 
-    var timerDisplay = $('#ContentPlaceHolder1_txtTimeDisplay');
+    //var timerDisplay = $('#ContentPlaceHolder1_txtTimeDisplay');
+    var timerDisplay = txtTimeDisplayAsp;
     var defaultTime = timerDisplay.attr('value');
     var startBtn = $('#start');
     var resetBtn = $('#reset');
@@ -38,6 +39,9 @@ $(document).ready(function () {
                 ongoingSeconds++;
                 var newTime = zeroPad(hours, 2).toString() + ":" + zeroPad(minutes, 2).toString() + ":" + zeroPad(seconds, 2).toString();
                 timerDisplay.val(newTime);
+                timerDisplay.attr('value', newTime);
+                lblTimeHidden.val(newTime);
+                lblTimeHidden.attr('value', newTime);
             }, interval);
         } else {
             e.target.attributes.active.value = 'false';
