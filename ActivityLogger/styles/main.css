@@ -67,6 +67,10 @@ body {
   float: left;
   text-align: left;
 }
+.off-screen {
+  position: fixed;
+  left: -9999px;
+}
 /* Timer */
 .time-label {
   font-size: 50px !important;

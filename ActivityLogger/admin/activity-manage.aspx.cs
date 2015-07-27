@@ -74,7 +74,7 @@ namespace ActivityLogger.admin
                         //Populate the activity from the input form
                         objA.account_id = HttpContext.Current.GetOwinContext().Authentication.User.Identity.GetUserId();
                         objA.activity_name = txtActivityName.Text;
-                        objA.duration = lblTimeHidden.Value;
+                        objA.duration = lblTimeHidden.Text;
                     }                    
 
                     if (String.IsNullOrEmpty(Request.QueryString["ActivityID"]))

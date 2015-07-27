@@ -71,6 +71,8 @@ function reset(startBtn, timerDisplay) {
     timerDisplay.empty();
     timerDisplay.val("00:00:00");
     window.clearInterval(intervalId);
+    lblTimeHidden.val('');
+    lblTimeHidden.attr('value', '');
 }
 
 function zeroPad(num, places) {
