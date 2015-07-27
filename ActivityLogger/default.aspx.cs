@@ -46,7 +46,7 @@ namespace ActivityLogger
                                     select n).FirstOrDefault();
 
                     lblName.Visible = true;
-                    lblName.Text = "Hey " + name.UserName + "! Start your active lifestyle by recording an activity now!";
+                    lblName.Text = "Hey " + name.UserName + "! Thanks for using Activity Logger! Start your active lifestyle by recording an activity now!";
                 }
             }
             catch (Exception e)

@@ -5,17 +5,16 @@
     <asp:PlaceHolder ID="plhPublic" runat="server">
         <h1>Welcome to Activity Logger!</h1>
         <p>A web app designed to promote physical activity throughout your week.</p>
-        <a href="/register.aspx" class="btn btn-info btn-large">Register</a>
-        <a href="/login.aspx" class="btn btn-success btn-large">Login</a>
+        <div class="col-lg-6">
+            <a href="/register.aspx" class="btn btn-info large large-half" style="margin-right: 2.5%;">Register</a>
+            <a href="/login.aspx" class="btn btn-success large large-half" style="margin-left: 2.5%;">Login</a>
+        </div>
     </asp:PlaceHolder>
     <asp:PlaceHolder ID="plhPrivate" runat="server">
-        <h1>Thanks for using Activity Logger!</h1>
-        <p>Your simple, beautiful, activity time management tool designed to keep you active!</p>
-        <hr />
-        <div class="col-lg-12" style="font-size:16px; font-weight:bold">
+        <div class="col-lg-6" style="font-size:20px; font-weight:bold">
             <asp:Label ID="lblName" runat="server" Text="Anonymous"></asp:Label>
             <br />
-            <a href="admin/activity-manage.aspx">Record Activity</a>
+            <a href="admin/activity-manage.aspx" class="btn btn-success large large-full">Record Activity</a>
         </div>
     </asp:PlaceHolder>
 </asp:Content>
