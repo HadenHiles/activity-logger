@@ -18,7 +18,36 @@ namespace ActivityLogger.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack) {
+                if (!String.IsNullOrEmpty(Request.QueryString["ActivityID"]))
+                {
+                    GetActivity();
+                }
+            }           
+        }
+
+        protected void GetActivity()
+        {
+            activity objA = new activity();
+
+            try
+            {
+                using (DefaultConnectionAL conn = new DefaultConnectionAL())
+                {
+                    Int32 ActivityID = Convert.ToInt32(Request.QueryString["ActivityID"]);
+                    objA = (from a in conn.activities
+                            where a.id == ActivityID
+                            select a).FirstOrDefault();
+
+                    txtActivityName.Text = objA.activity_name;
+                    pnlTiming.Visible = false;
+                    btnLog.Text = "Update";
+                }
+            }
+            catch (Exception e2)
+            {
+                Response.Redirect("~/error.aspx");
+            }      
         }
 
         protected void btnLog_Click(object sender, EventArgs e)
@@ -32,16 +61,21 @@ namespace ActivityLogger.admin
 
                     if (!String.IsNullOrEmpty(Request.QueryString["ActivityID"]))
                     {
-                        Int32 ActivityID = Convert.ToInt32(Request.QueryString["ActivityID"]);
+                        int ActivityID = Convert.ToInt32(Request.QueryString["ActivityID"]);
                         objA = (from a in conn.activities
                                 where a.id == ActivityID
                                 select a).FirstOrDefault();
-                    }
 
-                    //Populate the course from the input form
-                    objA.account_id = HttpContext.Current.GetOwinContext().Authentication.User.Identity.GetUserId();
-                    objA.activity_name = txtActivityName.Text;
-                    objA.duration = lblTimeHidden.Value;
+                        //Populate the activity from the input form
+                        objA.activity_name = txtActivityName.Text;
+                    }
+                    else
+                    {
+                        //Populate the activity from the input form
+                        objA.account_id = HttpContext.Current.GetOwinContext().Authentication.User.Identity.GetUserId();
+                        objA.activity_name = txtActivityName.Text;
+                        objA.duration = lblTimeHidden.Value;
+                    }                    
 
                     if (String.IsNullOrEmpty(Request.QueryString["ActivityID"]))
                     {

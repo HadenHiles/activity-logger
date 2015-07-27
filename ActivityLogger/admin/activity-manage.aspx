@@ -17,13 +17,15 @@
         <h1>Record Activity</h1>
         <hr />
         <asp:HiddenField ID="lblTimeHidden" runat="server" />
-        <div class="well col-lg-6">
-            <asp:TextBox ID="txtTimeDisplay" runat="server" CssClass="time-label" Text="00:00:00" Enabled="false"></asp:TextBox>
-        </div>
-        <div class="col-lg-6">
-            <button class="btn btn-default large large-half" style="margin-right: 2.5%;" id="reset">Reset</button>
-            <button class="btn btn-success large large-half" style="margin-left: 2.5%;" id="start" active="false">Start</button>
-        </div>
+        <asp:Panel runat="server" ID="pnlTiming">
+            <div class="well col-lg-6">
+                <asp:TextBox ID="txtTimeDisplay" runat="server" CssClass="time-label" Text="00:00:00" Enabled="false"></asp:TextBox>
+            </div>
+            <div class="col-lg-6">
+                <button class="btn btn-default large large-half" style="margin-right: 2.5%;" id="reset">Reset</button>
+                <button class="btn btn-success large large-half" style="margin-left: 2.5%;" id="start" active="false">Start</button>
+            </div>
+        </asp:Panel>
         <div class="clear"></div>
         <hr />
         <div class="col-lg-6">

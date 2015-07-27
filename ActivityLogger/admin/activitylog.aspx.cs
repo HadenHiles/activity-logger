@@ -23,8 +23,8 @@ namespace ActivityLogger.admin
 
         protected void GetActivities()
         {
-            //try
-            //{
+            try
+            {
                 using (DefaultConnectionAL conn = new DefaultConnectionAL())
                 {
                     var user = HttpContext.Current.GetOwinContext().Authentication.User.Identity.GetUserId();
@@ -40,15 +40,37 @@ namespace ActivityLogger.admin
                     grdActivities.DataSource = activityItems.ToList();
                     grdActivities.DataBind();
                 }
-            //}
-            //catch (Exception e1)
-            //{
-                //Response.Redirect("/error.aspx");
-            //}
+            }
+            catch (Exception e1)
+            {
+                Response.Redirect("/error.aspx");
+            }
         }
         protected void grdActivities_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            
+            try
+            {
+                using (DefaultConnectionAL conn = new DefaultConnectionAL())
+                {
+                    var user = HttpContext.Current.GetOwinContext().Authentication.User.Identity.GetUserId();
+
+                    Int32 ActivityID = Convert.ToInt32(grdActivities.DataKeys[e.RowIndex].Values["id"]);
+
+                    var activityItem = (from a in conn.activities
+                             where a.id == ActivityID
+                             select a).FirstOrDefault();
+                    //save
+                    conn.activities.Remove(activityItem);
+                    conn.SaveChanges();
+
+                    //redirect to updated departments page
+                    GetActivities();
+                }
+            }
+            catch (Exception e2)
+            {
+                Response.Redirect("~/error.aspx");
+            }
         }
     }
 }
