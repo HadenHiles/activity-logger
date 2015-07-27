@@ -4,19 +4,49 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3611e0fd116b49b085c078a7e384202c" Name="Diagram1">
-        <EntityTypeShape EntityType="ActivityLogger.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.account" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.activity" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.AspNetUser" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivityLogger.goal" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <AssociationConnector Association="ActivityLogger.FK__activitie__accou__59C55456" ManuallyRouted="false" />
+      <Diagram DiagramId="b6f7c1a6ff7a4460a0840d5c1dd52ac6" Name="Diagram1">
+        <EntityTypeShape EntityType="ActivityLogger.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.activity" Width="1.5" PointX="10.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.AspNetRole" Width="1.5" PointX="5.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.AspNetUserClaim" Width="1.5" PointX="10.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.AspNetUserLogin" Width="1.5" PointX="10.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.AspNetUser" Width="1.5" PointX="8" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Category" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Company" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Cours" Width="1.5" PointX="14" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.CustomerDemographic" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Customer" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Department" Width="1.5" PointX="11.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Employee" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Enrollment" Width="1.5" PointX="16.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.goal" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.movy" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Order_Detail" Width="1.5" PointX="7.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Product" Width="1.5" PointX="5.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Region" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Shipper" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Student" Width="1.5" PointX="14" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Supplier" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivityLogger.Territory" Width="1.5" PointX="13" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="ActivityLogger.FK__activitie__accou__6FB49575" ManuallyRouted="false" />
         <AssociationConnector Association="ActivityLogger.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="ActivityLogger.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Courses_DepartmentID" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Enrollments_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Employees_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Orders_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Enrollments_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Order_Details_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Order_Details_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Orders_Shippers" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Products_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.FK_Territories_Region" ManuallyRouted="false" />
         <AssociationConnector Association="ActivityLogger.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.CustomerCustomerDemo" ManuallyRouted="false" />
+        <AssociationConnector Association="ActivityLogger.EmployeeTerritories" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,17 +12,15 @@ namespace ActivityLogger.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Department
+    public partial class movy
     {
-        public Department()
-        {
-            this.Courses = new HashSet<Cours>();
-        }
-    
-        public int DepartmentID { get; set; }
-        public string Name { get; set; }
-        public Nullable<decimal> Budget { get; set; }
-    
-        public virtual ICollection<Cours> Courses { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string photourl { get; set; }
+        public string category { get; set; }
+        public Nullable<bool> blueray { get; set; }
+        public Nullable<int> movieyear { get; set; }
+        public Nullable<System.DateTime> dateadded { get; set; }
     }
 }

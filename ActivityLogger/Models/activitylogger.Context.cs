@@ -13,10 +13,10 @@ namespace ActivityLogger.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DefaultConnectionX : DbContext
+    public partial class DefaultConnectionAL : DbContext
     {
-        public DefaultConnectionX()
-            : base("name=DefaultConnectionX")
+        public DefaultConnectionAL()
+            : base("name=DefaultConnectionAL")
         {
         }
     
@@ -26,12 +26,28 @@ namespace ActivityLogger.Models
         }
     
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<account> accounts { get; set; }
         public virtual DbSet<activity> activities { get; set; }
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<Cours> Courses { get; set; }
+        public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Enrollment> Enrollments { get; set; }
         public virtual DbSet<goal> goals { get; set; }
+        public virtual DbSet<movy> movies { get; set; }
+        public virtual DbSet<Order_Detail> Order_Details { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Region> Regions { get; set; }
+        public virtual DbSet<Shipper> Shippers { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Territory> Territories { get; set; }
     }
 }

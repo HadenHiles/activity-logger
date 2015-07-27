@@ -11,7 +11,7 @@ namespace ActivityLogger.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Customer
     {
         public Customer()
@@ -19,7 +19,7 @@ namespace ActivityLogger.Models
             this.Orders = new HashSet<Order>();
             this.CustomerDemographics = new HashSet<CustomerDemographic>();
         }
-
+    
         public string CustomerID { get; set; }
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
@@ -31,7 +31,7 @@ namespace ActivityLogger.Models
         public string Country { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
-
+    
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<CustomerDemographic> CustomerDemographics { get; set; }
     }

@@ -10,7 +10,7 @@
 namespace ActivityLogger.admin {
     
     
-    public partial class activity {
+    public partial class activitymanage {
         
         /// <summary>
         /// txtTimeDisplay control.

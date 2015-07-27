@@ -12,19 +12,16 @@ namespace ActivityLogger.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class account
+    public partial class Company
     {
-        public account()
-        {
-            this.activities = new HashSet<activity>();
-        }
-    
-        public int id { get; set; }
-        public Nullable<int> facebook_id { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public string date_registerd { get; set; }
-    
-        public virtual ICollection<activity> activities { get; set; }
+        public int CompanyID { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string Province { get; set; }
+        public decimal Revenue { get; set; }
+        public decimal Expenses { get; set; }
+        public decimal NetIncome { get; set; }
+        public bool PremiumMember { get; set; }
+        public System.DateTime RegistrationDate { get; set; }
     }
 }

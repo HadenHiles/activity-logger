@@ -11,7 +11,7 @@ namespace ActivityLogger.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Order_Detail
     {
         public int OrderID { get; set; }
@@ -19,7 +19,7 @@ namespace ActivityLogger.Models
         public decimal UnitPrice { get; set; }
         public short Quantity { get; set; }
         public float Discount { get; set; }
-
+    
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
     }

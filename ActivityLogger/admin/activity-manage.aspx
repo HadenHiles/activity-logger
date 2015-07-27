@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Activity" Language="C#" MasterPageFile="~/activitylogger.Master" AutoEventWireup="true" CodeBehind="activity.aspx.cs" Inherits="ActivityLogger.admin.activity" %>
+﻿<%@ Page Title="Activity" Language="C#" MasterPageFile="~/activitylogger.Master" AutoEventWireup="true" CodeBehind="activity-manage.aspx.cs" Inherits="ActivityLogger.admin.activitymanage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--jquery CDN -->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

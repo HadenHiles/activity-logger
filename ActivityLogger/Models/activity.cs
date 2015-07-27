@@ -15,12 +15,10 @@ namespace ActivityLogger.Models
     public partial class activity
     {
         public int id { get; set; }
-        public int account_id { get; set; }
-        public Nullable<decimal> duration { get; set; }
+        public string account_id { get; set; }
+        public string duration { get; set; }
         public string activity_name { get; set; }
-        public Nullable<System.DateTime> date_started { get; set; }
-        public Nullable<System.DateTime> date_ended { get; set; }
     
-        public virtual account account { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

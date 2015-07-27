@@ -11,14 +11,14 @@ namespace ActivityLogger.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Product
     {
         public Product()
         {
             this.Order_Details = new HashSet<Order_Detail>();
         }
-
+    
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public Nullable<int> SupplierID { get; set; }
@@ -29,7 +29,7 @@ namespace ActivityLogger.Models
         public Nullable<short> UnitsOnOrder { get; set; }
         public Nullable<short> ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
-
+    
         public virtual Category Category { get; set; }
         public virtual ICollection<Order_Detail> Order_Details { get; set; }
         public virtual Supplier Supplier { get; set; }

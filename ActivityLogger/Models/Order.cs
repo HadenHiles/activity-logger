@@ -11,14 +11,14 @@ namespace ActivityLogger.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Order
     {
         public Order()
         {
             this.Order_Details = new HashSet<Order_Detail>();
         }
-
+    
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
         public Nullable<int> EmployeeID { get; set; }
@@ -33,7 +33,7 @@ namespace ActivityLogger.Models
         public string ShipRegion { get; set; }
         public string ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
-
+    
         public virtual Customer Customer { get; set; }
         public virtual Employee Employee { get; set; }
         public virtual ICollection<Order_Detail> Order_Details { get; set; }

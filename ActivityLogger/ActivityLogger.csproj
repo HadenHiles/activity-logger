@@ -103,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.aspx" />
-    <Content Include="admin\activity.aspx" />
+    <Content Include="admin\activity-manage.aspx" />
     <Content Include="admin\activitylog.aspx" />
     <Content Include="admin\goal.aspx" />
     <Content Include="admin\goals.aspx" />
@@ -134,22 +134,22 @@
       <DependentUpon>Contoso.edmx</DependentUpon>
       <LastGenOutput>Contoso.cs</LastGenOutput>
     </Content>
-    <EntityDeploy Include="Models\activitylogger.edmx">
+    <EntityDeploy Include="Models\ActivityLogger.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>activitylogger.Designer.cs</LastGenOutput>
+      <LastGenOutput>ActivityLogger.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\activitylogger.Context.tt">
+    <Content Include="Models\ActivityLogger.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>activitylogger.edmx</DependentUpon>
-      <LastGenOutput>activitylogger.Context.cs</LastGenOutput>
+      <DependentUpon>ActivityLogger.edmx</DependentUpon>
+      <LastGenOutput>ActivityLogger.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\activitylogger.edmx.diagram">
-      <DependentUpon>activitylogger.edmx</DependentUpon>
+    <Content Include="Models\ActivityLogger.edmx.diagram">
+      <DependentUpon>ActivityLogger.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\activitylogger.tt">
+    <Content Include="Models\ActivityLogger.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>activitylogger.edmx</DependentUpon>
-      <LastGenOutput>activitylogger.cs</LastGenOutput>
+      <DependentUpon>ActivityLogger.edmx</DependentUpon>
+      <LastGenOutput>ActivityLogger.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\ASPNETLesson5.pubxml" />
     <None Include="Properties\PublishProfiles\ContosoUniversity--Lesson11.pubxml" />
@@ -194,12 +194,12 @@
     <Compile Include="404.aspx.designer.cs">
       <DependentUpon>404.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\activity.aspx.cs">
-      <DependentUpon>activity.aspx</DependentUpon>
+    <Compile Include="admin\activity-manage.aspx.cs">
+      <DependentUpon>activity-manage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\activity.aspx.designer.cs">
-      <DependentUpon>activity.aspx</DependentUpon>
+    <Compile Include="admin\activity-manage.aspx.designer.cs">
+      <DependentUpon>activity-manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\activitylog.aspx.cs">
       <DependentUpon>activitylog.aspx</DependentUpon>
@@ -260,41 +260,41 @@
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\account.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\activity.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\activitylogger.Context.cs">
+    <Compile Include="Models\ActivityLogger.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>activitylogger.Context.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\activitylogger.cs">
+    <Compile Include="Models\ActivityLogger.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\activitylogger.Designer.cs">
+    <Compile Include="Models\ActivityLogger.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>activitylogger.edmx</DependentUpon>
+      <DependentUpon>ActivityLogger.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetRole.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs">
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contoso.Context.cs">
       <AutoGen>True</AutoGen>
@@ -311,53 +311,62 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Contoso.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cours.cs">
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Course.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomerDemographic.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Department.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enrollment.cs">
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Enrollments.cs">
       <DependentUpon>Contoso.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\goal.cs">
-      <DependentUpon>activitylogger.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\movy.cs">
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order_Detail.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Region.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Shipper.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Supplier.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Territory.cs">
-      <DependentUpon>Contoso.tt</DependentUpon>
+      <DependentUpon>ActivityLogger.tt</DependentUpon>
     </Compile>
     <Compile Include="activitylogger.Master.cs">
       <DependentUpon>activitylogger.Master</DependentUpon>

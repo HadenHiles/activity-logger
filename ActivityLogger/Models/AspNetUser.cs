@@ -16,6 +16,7 @@ namespace ActivityLogger.Models
     {
         public AspNetUser()
         {
+            this.activities = new HashSet<activity>();
             this.AspNetUserClaims = new HashSet<AspNetUserClaim>();
             this.AspNetUserLogins = new HashSet<AspNetUserLogin>();
             this.AspNetRoles = new HashSet<AspNetRole>();
@@ -35,6 +36,7 @@ namespace ActivityLogger.Models
         public string UserName { get; set; }
         public Nullable<System.DateTime> date_registered { get; set; }
     
+        public virtual ICollection<activity> activities { get; set; }
         public virtual ICollection<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual ICollection<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual ICollection<AspNetRole> AspNetRoles { get; set; }

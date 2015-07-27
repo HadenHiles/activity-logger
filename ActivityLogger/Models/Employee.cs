@@ -11,7 +11,7 @@ namespace ActivityLogger.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Employee
     {
         public Employee()
@@ -20,7 +20,7 @@ namespace ActivityLogger.Models
             this.Orders = new HashSet<Order>();
             this.Territories = new HashSet<Territory>();
         }
-
+    
         public int EmployeeID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
@@ -39,7 +39,7 @@ namespace ActivityLogger.Models
         public string Notes { get; set; }
         public Nullable<int> ReportsTo { get; set; }
         public string PhotoPath { get; set; }
-
+    
         public virtual ICollection<Employee> Employees1 { get; set; }
         public virtual Employee Employee1 { get; set; }
         public virtual ICollection<Order> Orders { get; set; }

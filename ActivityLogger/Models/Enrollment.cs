@@ -12,17 +12,14 @@ namespace ActivityLogger.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Department
+    public partial class Enrollment
     {
-        public Department()
-        {
-            this.Courses = new HashSet<Cours>();
-        }
+        public int EnrollmentID { get; set; }
+        public int CourseID { get; set; }
+        public int StudentID { get; set; }
+        public Nullable<int> Grade { get; set; }
     
-        public int DepartmentID { get; set; }
-        public string Name { get; set; }
-        public Nullable<decimal> Budget { get; set; }
-    
-        public virtual ICollection<Cours> Courses { get; set; }
+        public virtual Cours Cours { get; set; }
+        public virtual Student Student { get; set; }
     }
 }
