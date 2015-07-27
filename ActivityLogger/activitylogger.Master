@@ -39,7 +39,7 @@
                             <li><a href="/login.aspx">Login</a></li>
                         </asp:PlaceHolder>
                         <asp:PlaceHolder ID="plhPrivate" runat="server">
-                            <li><a href="/admin/leaderboard.aspx">Leaderboard</a></li>
+                            <%--<li><a href="/admin/leaderboard.aspx">Leaderboard</a></li>--%>
                             <li><a href="/admin/activitylog.aspx">Activity Log</a></li>
                             <li><a href="/logout.aspx">Log Out</a></li>
                         </asp:PlaceHolder>

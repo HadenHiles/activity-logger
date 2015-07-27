@@ -19,7 +19,7 @@ namespace ActivityLogger.admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField lblTimeHidden;
+        protected global::System.Web.UI.WebControls.TextBox lblTimeHidden;
         
         /// <summary>
         /// pnlTiming control.
@@ -31,6 +31,15 @@ namespace ActivityLogger.admin {
         protected global::System.Web.UI.WebControls.Panel pnlTiming;
         
         /// <summary>
+        /// txtCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCheck;
+        
+        /// <summary>
         /// txtTimeDisplay control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace ActivityLogger.admin {
         protected global::System.Web.UI.WebControls.TextBox txtTimeDisplay;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// txtActivityName control.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,15 @@ namespace ActivityLogger.admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtActivityName;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// btnLog control.

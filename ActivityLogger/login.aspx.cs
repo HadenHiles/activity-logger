@@ -31,7 +31,7 @@ namespace ActivityLogger
                 var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
                 authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
-                Response.Redirect("/admin/leaderboard.aspx");
+                Response.Redirect("/admin/activitylog.aspx");
             }
             else
             {
