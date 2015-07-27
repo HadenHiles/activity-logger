@@ -11,5 +11,11 @@
     <asp:PlaceHolder ID="plhPrivate" runat="server">
         <h1>Thanks for using Activity Logger!</h1>
         <p>Your simple, beautiful, activity time management tool designed to keep you active!</p>
+        <hr />
+        <div class="col-lg-12" style="font-size:16px; font-weight:bold">
+            <asp:Label ID="lblName" runat="server" Text="Anonymous"></asp:Label>
+            <br />
+            <a href="admin/activity-manage.aspx">Record Activity</a>
+        </div>
     </asp:PlaceHolder>
 </asp:Content>
