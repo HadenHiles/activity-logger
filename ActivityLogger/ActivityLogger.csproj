@@ -151,6 +151,9 @@
       <DependentUpon>ActivityLogger.edmx</DependentUpon>
       <LastGenOutput>ActivityLogger.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\activitylogger-assignment2 %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ActivityLogger-Assignment2.pubxml" />
+    <None Include="Properties\PublishProfiles\ActivityLogger.pubxml" />
     <None Include="Properties\PublishProfiles\ASPNETLesson5.pubxml" />
     <None Include="Properties\PublishProfiles\ContosoUniversity--Lesson11.pubxml" />
     <Content Include="styles\bootstrap-overrides.less" />
